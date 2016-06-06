@@ -2,19 +2,120 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Blank HTML5</title>
+        <title>Presentation</title>
+		<link rel="Stylesheet" href="bootstrap/css/bootstrap.css" />
+		
 <style>
+
+body{
+background-color:#fff;
+}
+
+#wrapper{
+width:1000px; 
+margin:0px auto;
+min-height:500px;
+background-color:#fff;
+}
+
+#puzzles{
+	width:700px;
+	margin:0 auto;
+	margin-top:70px;
+}
+
+.puzzle{
+	width:200px;
+	height:200px;
+	background-color:blue;
+	padding:2px;
+	margin:2px;
+	float:left;
+	text-align: center;
+    vertical-align: middle;
+	font-size:24px;
+	
+}
+
+.puzzle p{
+	line-height: 100px;
+}
+
+.light_puzzle{
+	background-color:yellow;
+}
+
+.clear{
+   clear:both;
+}
 </style>
-    </head>
-    <body>
-
-        <p>This is my HTML5 Boilerplate.</p>
-
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
 <script>
-$(document).ready(function() {
 
+$(document).ready(function() {
+	$('.puzzle').click(function(){
+		$(this).addClass('light_puzzle');
+	});
 });
 </script>
+    </head>
+    <body>
+        <div id="wrapper">
+			<div id="puzzles">
+				<div class="puzzle">
+					<p>Construction</p>
+				</div>
+				<div class="puzzle">
+					<p>Construction</p>
+				</div>
+				<div class="puzzle">
+					<p>Construction</p>
+				</div>
+				<div class="puzzle">
+					<p>Construction</p>
+				</div><div class="puzzle">
+					<p>Construction</p>
+				</div>
+				<div class="puzzle">
+					<p>Construction</p>
+				</div>
+				<div class="puzzle">
+					<p>Construction</p>
+				</div>
+				<div class="puzzle">
+					<p>Construction</p>
+				</div>
+				<div class="puzzle">
+					<p>Construction</p>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+			
+		</div>
+		
+		
     </body>
 </html>
